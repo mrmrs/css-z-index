@@ -6,8 +6,7 @@
   "keywords": [
     "css",
     "oocss",
-    "",
-    ""
+    "z-index"
   ],
   "css-z-index": {
     "type": "git",
