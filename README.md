@@ -31,7 +31,7 @@ or download the css on github and include in your project.
 .z-900  { z-index: 900; }
 .z-999  { z-index: 999; }
 
-@include break(not-small) {
+@media screen and (min-width: 48em) {
   .z-1-ns    { z-index: 1; }
   .z-100-ns  { z-index: 100; }
   .z-200-ns  { z-index: 200; }
@@ -45,7 +45,7 @@ or download the css on github and include in your project.
   .z-999-ns  { z-index: 999; }
 }
 
-@include break(medium) {
+@media screen and (min-width: 48em) and (max-width: 64em) {
   .z-1-m    { z-index: 1; }
   .z-100-m  { z-index: 100; }
   .z-200-m  { z-index: 200; }
@@ -59,7 +59,7 @@ or download the css on github and include in your project.
   .z-999-m  { z-index: 999; }
 }
 
-@include break(large) {
+@media screen and (min-width: 64em)  {
   .z-1-l    { z-index: 1; }
   .z-100-l  { z-index: 100; }
   .z-200-l  { z-index: 200; }
