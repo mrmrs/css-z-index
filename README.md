@@ -9,13 +9,18 @@
 *  -l  = large
 
 ## Install
+Grab the css partial from github and include it in your project or alternatively
+you can install it via npm:
 ```
 npm install --save-dev css-z-index
 ```
-or download the css on github and include in your project.
+View on [npm](https://www.npmjs.org/package/css-z-index)
+
 
 ## File Size
 
+1.4K z-index.css
+1.0K z-index.min.css
 
 ## The Code
 ```
