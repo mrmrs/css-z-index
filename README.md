@@ -20,7 +20,9 @@ View on [npm](https://www.npmjs.org/package/css-z-index)
 ## File Size
 
 1.4K z-index.css
-1.0K z-index.min.css
+1.0K z-index.min.css 
+247B minified and gzipped
+
 
 ## The Code
 ```
