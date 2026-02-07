@@ -1,129 +1,72 @@
-# css-z-index 0.0.7
+# css-z-index
 
-Css module of single purpose classes for z index
+Single purpose CSS classes for z-index.
 
-#### Stats
+## Install
 
-284 | 44 | 44
----|---|---
-bytes | selectors | declarations
-
-## Installation
-
-#### With [npm](https://npmjs.com)
-
-```
-npm install --save-dev css-z-index
-```
-
-#### With Git
-
-```
-git clone https://github.com/tachyons-css/css-z-index
+```sh
+npm install css-z-index
 ```
 
 ## Usage
 
-#### Using with [PostCSS](https://github.com/postcss/postcss)
-
-Import the css module
+### Import
 
 ```css
 @import "css-z-index";
 ```
 
-Then process the CSS using the [`tachyons-cli`](https://github.com/tachyons-css/tachyons-cli)
-
-```sh
-$ npm i -g tachyons-cli
-$ tachyons-cli path/to/css-file.css > dist/t.css
-```
-
-#### Using the CSS
-
-The built CSS is located in the `css` directory. It contains an unminified and minified version.
-You can either cut and paste that css or link to it directly in your html.
+### CDN
 
 ```html
-<link rel="stylesheet" href="path/to/module/css/css-z-index">
+<link rel="stylesheet" href="https://unpkg.com/css-z-index/dist/css-z-index.min.css">
 ```
 
-#### Development
+### Direct
 
-The source CSS files can be found in the `src` directory.
-Running `$ npm start` will process the source CSS and place the built CSS in the `css` directory.
-
-## The CSS
-
-```css
-/*
-   Z INDEX
-*/
-.z-1 { z-index: 1; }
-.z-100 { z-index: 100; }
-.z-200 { z-index: 200; }
-.z-300 { z-index: 300; }
-.z-400 { z-index: 400; }
-.z-500 { z-index: 500; }
-.z-600 { z-index: 600; }
-.z-700 { z-index: 700; }
-.z-800 { z-index: 800; }
-.z-900 { z-index: 900; }
-.z-999 { z-index: 999; }
-@media screen and (min-width: 48em) {
- .z-1-ns { z-index: 1; }
- .z-100-ns { z-index: 100; }
- .z-200-ns { z-index: 200; }
- .z-300-ns { z-index: 300; }
- .z-400-ns { z-index: 400; }
- .z-500-ns { z-index: 500; }
- .z-600-ns { z-index: 600; }
- .z-700-ns { z-index: 700; }
- .z-800-ns { z-index: 800; }
- .z-900-ns { z-index: 900; }
- .z-999-ns { z-index: 999; }
-}
-@media screen and (min-width:48em) and (max-width: 64em) {
- .z-1-m { z-index: 1; }
- .z-100-m { z-index: 100; }
- .z-200-m { z-index: 200; }
- .z-300-m { z-index: 300; }
- .z-400-m { z-index: 400; }
- .z-500-m { z-index: 500; }
- .z-600-m { z-index: 600; }
- .z-700-m { z-index: 700; }
- .z-800-m { z-index: 800; }
- .z-900-m { z-index: 900; }
- .z-999-m { z-index: 999; }
-}
-@media screen and (min-width: 64em) {
- .z-1-l { z-index: 1; }
- .z-100-l { z-index: 100; }
- .z-200-l { z-index: 200; }
- .z-300-l { z-index: 300; }
- .z-400-l { z-index: 400; }
- .z-500-l { z-index: 500; }
- .z-600-l { z-index: 600; }
- .z-700-l { z-index: 700; }
- .z-800-l { z-index: 800; }
- .z-900-l { z-index: 900; }
- .z-999-l { z-index: 999; }
-}
+```html
+<link rel="stylesheet" href="path/to/css-z-index/dist/css-z-index.min.css">
 ```
 
-## Contributing
+## Classes
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+| Class   | Value                    |
+|---------|--------------------------|
+| `.z1`   | `z-index: 1`            |
+| `.z2`   | `z-index: 100`          |
+| `.z3`   | `z-index: 200`          |
+| `.z4`   | `z-index: 300`          |
+| `.z5`   | `z-index: 400`          |
+| `.z6`   | `z-index: 500`          |
+| `.z7`   | `z-index: 600`          |
+| `.z8`   | `z-index: 700`          |
+| `.z9`   | `z-index: 800`          |
+| `.z10`  | `z-index: 900`          |
+| `.z11`  | `z-index: 2147483647`   |
 
-## Authors
+### Responsive
 
-* [mrmrs](http://mrmrs.io)
-* [johno](http://johnotander.com)
+Responsive variants are available for each class with the following suffixes:
+
+| Suffix | Media Query              |
+|--------|--------------------------|
+| `-s`   | `min-width: 32em`        |
+| `-m`   | `min-width: 48em`        |
+| `-l`   | `min-width: 96em`        |
+
+Example: `.z5-m` applies `z-index: 400` at the medium breakpoint and above.
+
+## Building
+
+```sh
+npm run build
+```
+
+Processes `src/css-z-index.css` with [Lightning CSS](https://lightningcss.dev) and outputs to `dist/`.
+
+- `dist/css-z-index.css` — formatted
+- `dist/css-z-index.min.css` — minified
 
 ## License
 
-ISC
+MIT

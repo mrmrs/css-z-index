@@ -1,38 +1,48 @@
 {
   "name": "css-z-index",
-  "style": "z-index.css",
-  "version": "1.0.7",
-  "homepage": "http://github.com/mrmrs/css-z-index",
-  "description": "Css module of single purpose classes for z index",
+  "version": "2.0.0",
+  "description": "Single purpose CSS classes for z-index",
+  "style": "dist/css-z-index.css",
+  "main": "dist/css-z-index.css",
+  "unpkg": "dist/css-z-index.min.css",
+  "jsdelivr": "dist/css-z-index.min.css",
+  "exports": {
+    ".": "./dist/css-z-index.css",
+    "./dist/*": "./dist/*",
+    "./src/*": "./src/*"
+  },
+  "sideEffects": true,
+  "files": [
+    "dist",
+    "src",
+    "llms.txt"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "prepublishOnly": "npm run build"
+  },
   "keywords": [
     "css",
-    "oocss",
-    "z-index"
+    "z-index",
+    "utility",
+    "single-purpose",
+    "functional-css"
   ],
-  "css-z-index": {
+  "homepage": "https://github.com/mrmrs/css-z-index",
+  "repository": {
     "type": "git",
-    "url": "http://github.com/mrmrs/css-z-index.git"
+    "url": "https://github.com/mrmrs/css-z-index.git"
   },
   "bugs": {
-    "url": "https://github.com/mrmrs/css-z-index/issues",
-    "email": "hi@mrmrs.cc"
+    "url": "https://github.com/mrmrs/css-z-index/issues"
   },
   "author": {
     "name": "Adam Morse",
     "email": "hi@mrmrs.cc",
     "url": "http://mrmrs.cc"
   },
-  "contributors": [
-    {
-      "name": "Adam Morse",
-      "email": "hi@mrmrs.cc"
-    }
-  ],
   "license": "MIT",
   "devDependencies": {
-    "tachyons-cli": "^1.3.0"
-  },
-  "scripts": {
-    "start": "tachyons src/css-z-index.css > css/css-z-index.css && tachyons src/css-z-index.css --minify > css/css-z-index.min.css && tachyons src/css-z-index.css --generate-docs --package=../../package.json > readme.md"
+    "lightningcss": "^1"
   }
 }

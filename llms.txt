@@ -1,0 +1,139 @@
+# css-z-index
+
+Single purpose CSS utility classes for z-index.
+
+## Install
+
+```
+npm install css-z-index
+```
+
+## Usage
+
+Add the stylesheet to your HTML:
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/css-z-index/dist/css-z-index.min.css">
+```
+
+Or import in CSS:
+
+```css
+@import "css-z-index";
+```
+
+## API
+
+11 z-index values on a simple numeric scale from `.z1` to `.z11`.
+
+| Class | z-index value    |
+|-------|------------------|
+| .z1   | 1                |
+| .z2   | 100              |
+| .z3   | 200              |
+| .z4   | 300              |
+| .z5   | 400              |
+| .z6   | 500              |
+| .z7   | 600              |
+| .z8   | 700              |
+| .z9   | 800              |
+| .z10  | 900              |
+| .z11  | 2147483647 (max) |
+
+## Responsive Suffixes
+
+Every class has responsive variants activated at three breakpoints. Append the suffix to any class name.
+
+| Suffix | Breakpoint       | Example   | Meaning                                  |
+|--------|------------------|-----------|------------------------------------------|
+| -s     | min-width: 32em  | .z5-s     | z-index: 400 at 32em and above           |
+| -m     | min-width: 48em  | .z5-m     | z-index: 400 at 48em and above           |
+| -l     | min-width: 96em  | .z5-l     | z-index: 400 at 96em and above           |
+
+## Complete Class List
+
+Base classes: .z1, .z2, .z3, .z4, .z5, .z6, .z7, .z8, .z9, .z10, .z11
+Small (-s):   .z1-s, .z2-s, .z3-s, .z4-s, .z5-s, .z6-s, .z7-s, .z8-s, .z9-s, .z10-s, .z11-s
+Medium (-m):  .z1-m, .z2-m, .z3-m, .z4-m, .z5-m, .z6-m, .z7-m, .z8-m, .z9-m, .z10-m, .z11-m
+Large (-l):   .z1-l, .z2-l, .z3-l, .z4-l, .z5-l, .z6-l, .z7-l, .z8-l, .z9-l, .z10-l, .z11-l
+
+Total: 44 classes.
+
+## Examples
+
+A basic stacking context:
+
+```html
+<div class="z1">Background layer</div>
+<div class="z5">Content layer</div>
+<div class="z10">Overlay layer</div>
+<div class="z11">Modal / highest priority</div>
+```
+
+Responsive z-index — low on small screens, elevated on larger screens:
+
+```html
+<div class="z1 z5-m z8-l">Elevates as viewport grows</div>
+```
+
+## Source CSS
+
+```css
+.z1  { z-index: 1; }
+.z2  { z-index: 100; }
+.z3  { z-index: 200; }
+.z4  { z-index: 300; }
+.z5  { z-index: 400; }
+.z6  { z-index: 500; }
+.z7  { z-index: 600; }
+.z8  { z-index: 700; }
+.z9  { z-index: 800; }
+.z10  { z-index: 900; }
+.z11  { z-index: 2147483647; }
+
+@media screen and (min-width: 32em) {
+  .z1-s  { z-index: 1; }
+  .z2-s  { z-index: 100; }
+  .z3-s  { z-index: 200; }
+  .z4-s  { z-index: 300; }
+  .z5-s  { z-index: 400; }
+  .z6-s  { z-index: 500; }
+  .z7-s  { z-index: 600; }
+  .z8-s  { z-index: 700; }
+  .z9-s  { z-index: 800; }
+  .z10-s  { z-index: 900; }
+  .z11-s  { z-index: 2147483647; }
+}
+
+@media screen and (min-width: 48em) {
+  .z1-m  { z-index: 1; }
+  .z2-m  { z-index: 100; }
+  .z3-m  { z-index: 200; }
+  .z4-m  { z-index: 300; }
+  .z5-m  { z-index: 400; }
+  .z6-m  { z-index: 500; }
+  .z7-m  { z-index: 600; }
+  .z8-m  { z-index: 700; }
+  .z9-m  { z-index: 800; }
+  .z10-m  { z-index: 900; }
+  .z11-m  { z-index: 2147483647; }
+}
+
+@media screen and (min-width: 96em) {
+  .z1-l  { z-index: 1; }
+  .z2-l  { z-index: 100; }
+  .z3-l  { z-index: 200; }
+  .z4-l  { z-index: 300; }
+  .z5-l  { z-index: 400; }
+  .z6-l  { z-index: 500; }
+  .z7-l  { z-index: 600; }
+  .z8-l  { z-index: 700; }
+  .z9-l  { z-index: 800; }
+  .z10-l  { z-index: 900; }
+  .z11-l  { z-index: 2147483647; }
+}
+```
+
+## License
+
+MIT
