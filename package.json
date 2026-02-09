@@ -2,12 +2,12 @@
   "name": "css-z-index",
   "version": "2.0.0",
   "description": "Single purpose CSS classes for z-index",
-  "style": "dist/css-z-index.css",
-  "main": "dist/css-z-index.css",
-  "unpkg": "dist/css-z-index.min.css",
-  "jsdelivr": "dist/css-z-index.min.css",
+  "style": "dist/z-index.css",
+  "main": "dist/z-index.css",
+  "unpkg": "dist/z-index.min.css",
+  "jsdelivr": "dist/z-index.min.css",
   "exports": {
-    ".": "./dist/css-z-index.css",
+    ".": "./dist/z-index.css",
     "./dist/*": "./dist/*",
     "./src/*": "./src/*"
   },

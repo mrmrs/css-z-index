@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { transform } = require('lightningcss');
 
-const srcFile = path.join(__dirname, 'src', 'css-z-index.css');
+const srcFile = path.join(__dirname, 'src', 'z-index.css');
 const distDir = path.join(__dirname, 'dist');
 
 // Read source
@@ -15,22 +15,22 @@ if (!fs.existsSync(distDir)) {
 
 // Unminified — just normalize formatting
 const { code: unminified } = transform({
-  filename: 'css-z-index.css',
+  filename: 'z-index.css',
   code: Buffer.from(source),
   minify: false,
 });
 
-fs.writeFileSync(path.join(distDir, 'css-z-index.css'), unminified);
+fs.writeFileSync(path.join(distDir, 'z-index.css'), unminified);
 
 // Minified
 const { code: minified } = transform({
-  filename: 'css-z-index.css',
+  filename: 'z-index.css',
   code: Buffer.from(source),
   minify: true,
 });
 
-fs.writeFileSync(path.join(distDir, 'css-z-index.min.css'), minified);
+fs.writeFileSync(path.join(distDir, 'z-index.min.css'), minified);
 
 console.log('Build complete:');
-console.log(`  dist/css-z-index.css     ${unminified.length} bytes`);
-console.log(`  dist/css-z-index.min.css ${minified.length} bytes`);
+console.log(`  dist/z-index.css     ${unminified.length} bytes`);
+console.log(`  dist/z-index.min.css ${minified.length} bytes`);
